@@ -23,16 +23,16 @@ ms.lasthandoff: 11/09/2018
 ms.locfileid: "51350596"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Jet の概要
-For Microsoft Jet OLE DB Provider には、Microsoft Jet データベースにアクセスする ADO ができます。
+OLE DB Provider For Microsoft Jet を使うと、ADOで Microsoft Jet データベースにアクセスできます。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- このプロバイダーに接続するには、設定、*Provider*の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)には、次のプロパティ。 
+ このプロバイダーに接続するには、[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) プロパティの *Provider* 引数を以下のように設定します。 
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
- 読み取り、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティはこの文字列を返すこともできます。
+[Provider](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを読み出すとこの文字列を返します。
 
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
@@ -41,22 +41,22 @@ Microsoft.Jet.OLEDB.4.0
 "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=databaseName;User ID=MyUserID;Password=MyPassword;"
 ```
 
- 文字列は、これらのキーワードで構成されます。
+ 接続文字列は、以下のようなキーワードで構成されます。
 
 |Keyword|説明|
 |-------------|-----------------|
-|**Provider**|For Microsoft Jet OLE DB プロバイダーを指定します。|
-|**Data Source**|データベースのパスとファイル名を指定します (たとえば、 `c:\Northwind.mdb`)。|
-|**User ID**|ユーザー名を指定します。 このキーワードが指定されていない場合、文字列"`admin`"、既定で使用されます。|
-|**Password**|ユーザーのパスワードを指定します。 このキーワードが指定されていない場合、空の文字列 ("")、既定で使用されます。|
+|**Provider**|OLE DB Proider For Microsoft Jet を指定します。|
+|**Data Source**|データベースのパスとファイル名を指定します (たとえば `c:\Northwind.mdb`)。|
+|**User ID**|ユーザー名を指定します。 このキーワードが指定されていない場合、文字列"`admin`" が既定で使用されます。|
+|**Password**|ユーザーのパスワードを指定します。 このキーワードが指定されていない場合、空の文字列 ("") が既定で使用されます。|
 
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
+>  Windows 認証をサポートするデータ ソース プロバイダーに接続する場合は、ユーザー ID とパスワードの代わりに **Trusted_Connection = yes**または**Integrated Security = SSPI** を指定する必要があります。
 
 ## <a name="provider-specific-connection-parameters"></a>プロバイダー固有の接続パラメーター
- For Microsoft Jet OLE DB プロバイダーでは、ADO で定義されているものに加えていくつかのプロバイダーに固有の動的プロパティをサポートします。 他のすべてのと同様**接続**に設定できるパラメーターを使用して、**プロパティ**のコレクション、**接続**オブジェクトまたは接続文字列の一部として。
+ OLE DB Provide For Microsoft Jet は、ADO で定義されているものに加えて、いくつかのプロバイダー固有の動的プロパティをサポートします。 他のすべての **Connection** パラメータと同様に、**Connection** オブジェクトの **Propaties** コレクション、または接続文字列の一部として指定できます。
 
- 次の表は、かっこ内の対応する OLE DB プロパティ名と共にこれらのプロパティを一覧表示します。
+ 次の表は、これらのプロパティの一覧です。かっこ内には対応する OLE DB プロパティ名を表示しています。
 
 |パラメーター|説明|
 |---------------|-----------------|
